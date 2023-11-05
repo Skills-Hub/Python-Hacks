@@ -38,3 +38,44 @@
 19. **Asynchronous Programming**: Use async/await patterns when dealing with I/O-bound operations to improve efficiency.
 
 20. **Scalability Considerations**: Design the code to be scalable, both in terms of data and traffic, ensuring that the system can handle growth.
+
+
+1. **Decorator Use**: Utilize decorators for cross-cutting concerns (like caching, timing, and logging) to keep method logic clean.
+
+2. **Context Managers**: Implement custom context managers if the class deals with external resources or needs to have enter and exit states.
+
+3. **Metaclasses**: Use metaclasses where appropriate for creating classes in a dynamic fashion or enforcing certain patterns.
+
+4. **Descriptive Names**: Employ descriptive, unambiguous names for methods and attributes.
+
+5. **Duck Typing**: Design methods to rely on duck typing and not be overly restrictive, embracing Python’s “ask forgiveness not permission” philosophy.
+
+6. **Single Responsibility Principle**: Ensure the class adheres strictly to the single responsibility principle.
+
+7. **Magic Methods**: Properly implement magic methods to integrate with Python’s built-in features and syntax (like `__len__`, `__repr__`, `__str__`, and `__iter__`).
+
+8. **Dataclass Decorator**: For simple data holding classes, use the `@dataclass` decorator to reduce boilerplate.
+
+9. **Generators**: Use generators (`yield`) for methods that can produce a sequence of values over time, optimizing memory usage.
+
+10. **Property Decorators**: Use `@property` decorators to create managed attributes, incorporating getter, setter, and deleter functionalities.
+
+11. **Static and Class Methods**: Appropriately use `@staticmethod` and `@classmethod` when methods do not need to interact with class instance state.
+
+12. **Annotations and Type Checking**: Include type hints and use tools like `mypy` to perform static type checking.
+
+13. **Custom Exceptions**: Define custom exception classes for error handling that are specific to the class's domain.
+
+14. **Optimization with Cython**: If performance is crucial, use Cython extensions for computationally intensive methods.
+
+15. **Dynamic Attribute Access**: Implement custom `__getattr__`, `__getattribute__`, and `__setattr__` methods to handle dynamic attribute access if required.
+
+16. **Efficient Attribute Storage**: Use `__slots__` to make classes more memory efficient by preventing the creation of instance dictionaries.
+
+17. **Module-Level Abstraction**: Ensure the class interacts with the rest of the module in a way that promotes loose coupling and high cohesion.
+
+18. **Rich Comparison Methods**: Implement the rich comparison methods (`__eq__`, `__ne__`, `__lt__`, `__le__`, `__gt__`, `__ge__`) to allow object comparison.
+
+19. **Immutable Data Handling**: For immutable classes, ensure all attributes are read-only, possibly using `@property` with a setter that raises an exception.
+
+20. **Lazy Properties**: Implement properties that do expensive computations lazily, meaning the computation is only done when the property is accessed for the first time.
